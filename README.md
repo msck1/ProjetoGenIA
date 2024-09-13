@@ -6,4 +6,6 @@ Nesse projeto estou fazendo um [RAG](https://aws.amazon.com/pt/what-is/retrieval
 
 Para executar, siga as instruções no arquivo requirements e depois execute o código:
 
-```pip install -r requirements.txt```
+```python
+pip install -r requirements.txt
+```
