@@ -7,7 +7,7 @@ import openai
 import os
 import shutil
 
-openai.api_key = os.getenv("OPENAI_API_KEY") # chave api do openai
+openai.api_key = # chave api do openai
 
 CHROMA_PATH = "" # path do db
 DATA_PATH = r"" # path dos documentos
