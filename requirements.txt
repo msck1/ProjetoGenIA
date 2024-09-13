@@ -1,0 +1,8 @@
+langchain==0.2.2
+langchain-community==0.2.3
+langchain-openai==0.1.8 # embeddings
+unstructured==0.14.4 # carregar documentos
+# onnxruntime==1.17.1 # dependencia do chroma, baixar o visual studio 
+chromadb==0.5.0 # banco de dados de vetores, 
+openai==1.31.1 # embeddings
+tiktoken==0.7.0  # embeddings
