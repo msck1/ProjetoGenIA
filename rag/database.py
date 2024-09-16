@@ -7,10 +7,10 @@ import openai
 import os
 import shutil
 
-openai.api_key = # chave api do openai
+openai.api_key = os.getenv("OPENAI_API_KEY") # chave api do openai
 
-CHROMA_PATH = "" # path do db
-DATA_PATH = r"" # path dos documentos
+CHROMA_PATH = r"C:\Users\Daniel\Documents\estudosGenAI\rag\chroma" # path do db
+DATA_PATH = r"C:\Users\Daniel\Documents\estudosGenAI\rag\md" # path dos documentos
 
 def main():
     generate_data_store()
@@ -21,13 +21,13 @@ def generate_data_store():
     save_to_chroma(chunks)
 
 def load_documents(): # carrega os documentos que irao para o chunking
-    loader = DirectoryLoader(DATA_PATH, glob="*.txt") # tipo do documento
+    loader = DirectoryLoader(DATA_PATH, glob="*.md") # tipo do documento
     documents = loader.load()
     return documents
 
 def split_text(documents: list[Document]): # faz o chunk do documento, imprime o resultado
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=300,
+        chunk_size=400,
         chunk_overlap=100,
         length_function=len,
         add_start_index=True,
@@ -35,7 +35,7 @@ def split_text(documents: list[Document]): # faz o chunk do documento, imprime o
     chunks = text_splitter.split_documents(documents)
     print(f"Split {len(documents)} documents into {len(chunks)} chunks.")
 
-    document = chunks[1]
+    document = chunks[15]
     print(document.page_content)
     print(document.metadata)
 
@@ -55,3 +55,5 @@ def save_to_chroma(chunks: list[Document]): # faz o embedding dos chunks
 
 if __name__ == "__main__":
     main()
+
+
