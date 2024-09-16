@@ -9,8 +9,8 @@ import shutil
 
 openai.api_key = os.getenv("OPENAI_API_KEY") # chave api do openai
 
-CHROMA_PATH = r"C:\Users\Daniel\Documents\estudosGenAI\rag\chroma" # path do db
-DATA_PATH = r"C:\Users\Daniel\Documents\estudosGenAI\rag\md" # path dos documentos
+CHROMA_PATH = r"" # path do db
+DATA_PATH = r"" # path dos documentos
 
 def main():
     generate_data_store()

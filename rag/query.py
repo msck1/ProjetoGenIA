@@ -4,7 +4,7 @@ from langchain_openai import OpenAIEmbeddings
 from langchain_openai import ChatOpenAI
 from langchain.prompts import ChatPromptTemplate
 
-CHROMA_PATH = r"C:\Users\Daniel\Documents\estudosGenAI\rag\chroma"
+CHROMA_PATH = r""
 
 PROMPT_TEMPLATE = """
 
